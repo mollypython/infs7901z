@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block content %}
+<div id="jumbotron_id" class="jumbotron">
+        <h1>Add CART!</h1>
+         <p>Find the car you like the most in few clicks</p>
+            
+                <!-- <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form action="" method="POST">
+                                    <div class="content-section">
+                                        {{ form.hidden_tag() }}
+                                          <div class="form-group">
+                                                <div class="row">
+                                                      <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                  {{ form.rid.label(class="form-control-label") }}
+                                                                  <select class="form-control" id="Rid">
+                                                                              <option>1</option>
+                                                                              <option>2</option>
+                                                                              <option>3</option>
+                                                                              <option>4</option>
+                                                                              <option>5</option>
+                                                                  </select>
+                                                            </div>
+                                                      </div>
+                                                      <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                  {{ form.stars.label(class="form-control-label") }}                                       
+                                                                        {% if form.stars.errors %}
+                                                                        {{ form.stars(class="form-control form-control-lg is-invalid") }}
+                                                                        <select class="form-control" id="stars">
+                                                                                <option>1</option>
+                                                                                <option>2</option>
+                                                                                <option>3</option>
+                                                                                <option>4</option>
+                                                                                <option>5</option>
+                                                                        </select>                                                                        
+                                                                        <div class="invalid-feedback">
+                                                                              {% for error in form.stars.errors %}
+                                                                              <span>{{ error }}</span>
+                                                                              {% endfor %}
+                                                                        </div>
+                                                                        {% else %}
+                                                                              {{ form.stars(class="form-control form-control-lg") }}
+                                                                        {% endif %}
+                                                                  </div>
+                                                            </div> 
+                                                      </div>
+                                                </div>
+                                          <div class="form-group form-check">
+                                                      <input type="checkbox" class="form-check-input" id="Rid">
+                                                      <label class="form-check-label" for="Rid">Check me out</label>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                          </div>
+                                      </form> -->
+      
+
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
