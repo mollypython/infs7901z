@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+      <div id="jumbotron_id" class="jumbotron">
+        <h1>CART!</h1>
+        <p>Find the car you like the most in few clicks</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="/add_wishlist">Add New Wish</a>
+        </p>
+        <p>
+            <a class="btn btn-secondary btn-lg" href="/delete_wishlist">Delete Wish</a>
+          </p>
+        <p>
+          <form method="POST" action="">
+            <!-- <div class="content-section"> -->
+              <div class="dropdown">
+                <div class="row">
+                  <div class="col-md-12">
+                      <select name="Wishid" class="btn btn-light dropdown-toggle">
+                          <option value="" disabled selected>Wishid</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                    <select name="Uid" class="btn btn-light dropdown-toggle">
+                        <option value="" disabled selected>Uid</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+  
+                      </select>
+                      <select name="Postid" class="btn btn-light dropdown-toggle">
+                          <option value="" disabled selected>Postid</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      <input type="submit" value="Search" class="btn btn-info">
+                    </div>
+                    <!-- <div class="col-md-4">
+                    </div> -->
+                  </div>
+                </div>
+              <!-- </div> -->
+            </form>
+          </p>
+        </div>
+        <table border="1", class="table">
+            <thead>
+                <tr>
+                    <th>Wishid</th>
+                    <th>Uid</th>
+                    <th>Postid</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for w in wishlist %}
+                        <tr>
+                            <td>{{ w[0] }}</td>
+                            <td>{{ w[1] }}</td>
+                            <td>{{ w[2] }}</td>
+                        </tr>
+                {% endfor %}          
+            </tbody>       
+        </table>
+
+  {% endblock content %}

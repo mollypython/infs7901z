@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+      <div id="jumbotron_id" class="jumbotron">
+           <h1>Edit CART!</h1>
+            <p>Find the car you like the most in few clicks</p>
+            <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <form action="" method="POST">
+                              <div class="content-section">
+                                  {{ form.hidden_tag() }}
+                                    <div class="form-group">
+                                          <div class="row">
+                                                <div class="col-md-6">
+                                                      <div class="form-group">
+                                                           <select class="form-control" id="Uid" name = "uid">
+                                                                        <option value="" disabled selected> Uid</option>
+                                                                        <option value = "1">1</option>
+                                                                        <option value = "2">2</option>
+                                                                        <option value = "3">3</option>
+                                                                        <option value = "4">4</option>
+                                                                        <option value = "5">5</option>
+                                                            </select>
+                                                      </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                      <div class="form-group">
+                                                            <select class="form-control" id="Wishid" name = "wishid">
+                                                                        <option value="" disabled selected>Wishid</option>
+                                                                        <option value = "1">1</option>
+                                                                        <option value = "2">2</option>
+                                                                        <option value = "3">3</option>
+                                                                        <option value = "4">4</option>
+                                                                        <option value = "5">5</option>
+                                                            </select>
+                                                            </div>
+                                                      </div> 
+                                                </div>
+                                          </div>
+                                          <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                                                                    
+
+  {% endblock content %}

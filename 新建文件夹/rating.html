@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block content %}
+      <div id="jumbotron_id" class="jumbotron">
+        <h1>GOOD RATING!</h1>
+        <p>Find the car you like the most in few clicks</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="/edit_rating">Edit Rating</a>
+        </p>
+        <p>
+          <form method="POST" action="">
+            <!-- <div class="content-section"> -->
+              <div class="dropdown">
+                <div class="row">
+                  <div class="col-md-12">
+                    
+                    <select name="Date_post" class="btn btn-light dropdown-toggle">
+                      <option value="" disabled selected>Year</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+
+                    </select>
+                    <select name="Stars" class="btn btn-light dropdown-toggle">
+                      <option value="" disabled selected>Stars</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <select name="Uid" class="btn btn-light dropdown-toggle">
+                            <option value="" disabled selected>Uid</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                    </select>
+                    <select name="Rid" class="btn btn-light dropdown-toggle">
+                            <option value="" disabled selected>Rid</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+      
+                    </select>
+                    <input type="submit" value="Search" class="btn btn-info">
+                  </div>
+                  <!-- <div class="col-md-4">
+                  </div> -->
+                </div>
+              </div>
+            <!-- </div> -->
+          </form>
+        </p>
+      </div>
+
+      <table border="1" class="table">
+            <thead>
+              
+                <tr>
+                    <th>Rid</th>
+                    <th>Date_post</th>
+                    <th>Stars</th>
+                    <th>Comment</th>
+                    <th>Uid</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in rating %} 
+                        <tr>
+                            <td>{{ r[0] }}</td> 
+                            <td>{{ r[1] }}</td> 
+                            <td>{{ r[2] }}</td> 
+                            <td>{{ r[3] }}</td> 
+                            <td>{{ r[4] }}</td>  
+                        </tr>
+                {% endfor %}
+            </tbody>         
+{% endblock content %}

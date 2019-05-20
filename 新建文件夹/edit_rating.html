@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+<div id="jumbotron_id" class="jumbotron">
+        <h1>Edit Rating!</h1>
+         <p>Find the car you like the most in few clicks</p>            
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form action="" method="POST">
+                                    <div class="content-section">
+                                        {{ form.hidden_tag() }}
+                                          <div class="form-group">
+                                                <div class="row">
+                                                       <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                  <select class="form-control" id="stars" name = "stars">
+                                                                        <option value="" disabled selected> Stars</option>
+                                                                        <option>1</option>
+                                                                        <option>2</option>
+                                                                        <option>3</option>
+                                                                        <option>4</option>
+                                                                        <option>5</option>
+                                                                  </select>                                                                                                                                                    
+                                                            </div> 
+                                                      </div>
+                                                      <!-- <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                  <label for="comment">Comment</label>
+                                                                  <textarea class="form-control" id="Comment" name = "comment" rows="3"></textarea>
+                                                            </div>
+                                                      </div> -->
+                                                      <div class="col-md-6">
+                                                                  <div class="form-group">                        
+                                                                        <select class="form-control" id="Uid" name = "uid">
+                                                                                    <option value="" disabled selected> Uid</option>
+                                                                                    <option>1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                        </select>
+                                                                  </div>
+                                                      <div class="col-md-12">
+                                                            <div class="form-group">                        
+                                                                  <select class="form-control" id="Rid" name = "rid">
+                                                                              <option value="" disabled selected> Rid</option>
+                                                                              <option>1</option>
+                                                                              <option>2</option>
+                                                                              <option>3</option>
+                                                                              <option>4</option>
+                                                                              <option>5</option>
+                                                                  </select>
+                                                            </div>
+                                                      </div>
+
+                                                </div>
+                                              <div class="col-md-6">  
+                                              <button type="submit" class="btn btn-primary">Submit</button>
+                                          </div>
+                              </form>
+      
+
+
+                  </div>
+
+
+            </div>
+    </div>
+
+</div>
+
+{% endblock content %}

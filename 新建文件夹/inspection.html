@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% block content %}
+      <div id="jumbotron_id" class="jumbotron">
+        <h1>Inspection!</h1>
+        <p>Find the car you like the most in few clicks</p>
+        <p>
+          <form method="POST" action="">
+            <!-- <div class="content-section"> -->
+              <div class="dropdown">
+                <div class="row">
+                  <div class="col-md-12">
+                        <select name="Inspect_id" class="btn btn-light dropdown-toggle">
+                                <option value="" disabled selected>Inspect_id</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+          
+                        </select>
+                        <select name="Date" class="btn btn-light dropdown-toggle">
+                                <option value="" disabled selected>Date</option>
+                                <option value="1">August</option>
+                                <option value="2">September</option>
+                                <option value="3">October</option>
+                                <option value="4">November</option>
+                                <option value="5">December</option>
+                              </select>
+                      <select name="Location" class="btn btn-light dropdown-toggle">
+                                <option value="" disabled selected>Location</option>
+                                <option value="brisbane">Brisbane</option>
+                                <option value="melbourne">Melbourne</option>
+                                <option value="sydney">Sydney</option>
+  
+                      </select>
+                      <select name="If_booked" class="btn btn-light dropdown-toggle">
+                                    <option value="" disabled selected>If_booked</option>
+                                    <option value="0">Yes</option>
+                                    <option value="1">Not Yet</option>
+                      </select>
+                      <select name="Postid" class="btn btn-light dropdown-toggle">
+                            <option value="" disabled selected>Postid</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                      </select>
+                      <input type="submit" value="Search" class="btn btn-info">
+                    </div>
+                    <!-- <div class="col-md-4">
+                    </div> -->
+                  </div>
+                </div>
+              <!-- </div> -->
+            </form>
+          </p>
+        </div>
+        <table border="1", class="table">
+            <thead>
+                <tr>
+                        <th>Insepct_id</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>If_booked</th>
+                        <th>Postid</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in inspects %}
+                    <tr>
+                            <td>{{ i[0] }}</td>
+                            <td>{{ i[1] }}</td>
+                            <td>{{ i[2] }}</td>
+                            <td>{{ i[3] }}</td>
+                            <td>{{ i[4] }}</td>
+                    </tr>
+                {% endfor %}          
+            </tbody>       
+        </table>
+
+  {% endblock content %}
